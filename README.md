@@ -16,6 +16,7 @@
 Run `python manage.py createsuperuser` to create admin account in django framework
  - Give email id `admin@xyz.com`
  - Password: `admin123`
+
 Login using the admin account
 
 ### Create other users
