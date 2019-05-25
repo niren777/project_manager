@@ -15,10 +15,11 @@
 ## Using the project management application
 
 ### Create Admin account
-Run `python manage.py createsuperuser` to create admin account in django framework
+Stop the runserver using `cntl+c` and Run `python manage.py createsuperuser` to create admin account in django framework
  - Give email id `admin@xyz.com`
  - Password: `admin123`
  - Confirm again the same password
+ - Run the server again `python manage.py runserver`
 
 Navigate to http://localhost:8000/admin/ and Login using the admin account
 
