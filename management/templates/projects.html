@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>Accounts</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Project ID</th>
+            <th>Project Name</th>
+            <th>Number of tasks</th>
+        </tr>
+    {% for project in projects %}
+        <tr>
+            <th>{{project.id}}</th>
+            <th><a href="/projects/{{project.id}}/">{{project.name}}</a></th>
+            <th>{{project.number_of_tasks}}</th>
+    {% endfor %}
+    </table>
+</body>
+</html>

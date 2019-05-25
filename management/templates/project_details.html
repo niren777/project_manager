@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>Project Details</title>
+</head>
+
+<body>
+    <div>
+        Project ID: {{project.id}} </br>
+        Project Name: {{project.name}} </br>
+        Project Description: {{project.description}} </br>
+        Start Date: {{project.start_date}} </br>
+        End Date: {{project.end_date}} </br>
+        <table>
+            <tr>
+                <th>Task ID</th>
+                <th>Task Name</th>
+                <th>Assignee</th>
+            </tr>
+        {% for task in project.tasks %}
+            <tr>
+                <th>{{task.id}}</th>
+                <th><a href="/projects/{{project.id}}/tasks/{{task.id}}/">{{task.name}}</a></th>
+                <th>{{task.owner.name}}</th>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
